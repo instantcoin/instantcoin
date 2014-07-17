@@ -82,12 +82,7 @@ public:
         assert(hashGenesisBlock == uint256("0x00000aeaebce03adab8292a58216dc0dd86d4cebdf375446f6b39d6f64d02fe0"));
         assert(genesis.hashMerkleRoot == uint256("0xcb3a4f3b06d360caa9c323da9cd7bfea97d38d5def52ecb446b012bbe8e26b0f"));
 
-        vSeeds.push_back(CDNSSeedData("bitcoin.sipa.be", "seed.bitcoin.sipa.be"));
-        vSeeds.push_back(CDNSSeedData("bluematt.me", "dnsseed.bluematt.me"));
-        vSeeds.push_back(CDNSSeedData("dashjr.org", "dnsseed.bitcoin.dashjr.org"));
-        vSeeds.push_back(CDNSSeedData("bitcoinstats.com", "seed.bitcoinstats.com"));
-        vSeeds.push_back(CDNSSeedData("bitnodes.io", "seed.bitnodes.io"));
-        vSeeds.push_back(CDNSSeedData("xf2.org", "bitseed.xf2.org"));
+        vSeeds.push_back(CDNSSeedData("ns.instantcoin.genesis.foundation", "seed.instantcoin.genesis.foundation"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(102);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(5);
@@ -165,8 +160,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("bitcoin.petertodd.org", "testnet-seed.bitcoin.petertodd.org"));
-        vSeeds.push_back(CDNSSeedData("bluematt.me", "testnet-seed.bluematt.me"));
+	vSeeds.push_back(CDNSSeedData("ns.instantcoin.genesis.foundation", "seed.instantcoin.genesis.foundation"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(111);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(196);
