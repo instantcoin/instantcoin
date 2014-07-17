@@ -65,9 +65,9 @@ script: |
     if [ "$NEEDDIST" == "1" ]; then
       # Make source code archive which is architecture independent so it only needs to be done once
       cd $HOME/build/instantcoin
-      chmod +x autogen.sh
-      chmod +x share/genbuild.sh
-      chmod 755 src/leveldb/build_detect_platform
+      #chmod +x autogen.sh
+      #chmod +x share/genbuild.sh
+      #chmod 755 src/leveldb/build_detect_platform
       ./autogen.sh
       ./configure --bindir=$OUTDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include ${OPTFLAGS}" LDFLAGS="-L$STAGING/lib ${OPTFLAGS}" CXXFLAGS="-frandom-seed=instantcoin ${OPTFLAGS}"
       cd ..
@@ -82,9 +82,9 @@ script: |
     git clone https://github.com/instantcoin/instantcoin.git
     mv instantcoin/* .
     rm -rf instantcoin
-    chmod +x autogen.sh
-    chmod +x share/genbuild.sh
-    chmod 755 src/leveldb/build_detect_platform
+    #chmod +x autogen.sh
+    #chmod +x share/genbuild.sh
+    #chmod 755 src/leveldb/build_detect_platform
     ./autogen.sh
     ./configure --enable-upnp-default --bindir=$BINDIR --prefix=$STAGING --host=$HOST --with-qt-plugindir=$STAGING/plugins  --with-qt-incdir=$STAGING/include --with-qt-bindir=$STAGING/host/bin --with-boost=$STAGING --disable-maintainer-mode --with-protoc-bindir=$STAGING/host/bin --disable-dependency-tracking CPPFLAGS="-I$STAGING/include ${OPTFLAGS}" LDFLAGS="-L$STAGING/lib ${OPTFLAGS}" CXXFLAGS="-frandom-seed=instantcoin ${OPTFLAGS}"
     export LD_PRELOAD=/usr/lib/faketime/libfaketime.so.1
