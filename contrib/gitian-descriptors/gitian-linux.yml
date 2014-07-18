@@ -59,6 +59,9 @@ script: |
   }
   #
   cd instantcoin
+  chmod +x autogen.sh
+  chmod +x share/genbuild.sh
+  chmod 755 src/leveldb/build_detect_platform
   ./autogen.sh
   do_configure
   cd ..
