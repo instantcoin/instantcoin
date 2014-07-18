@@ -66,7 +66,7 @@ script: |
   do_configure
   cd ..
   tar -zcvf instantcoin.tar.gz instantcoin
-  DISTNAME=`echo instantcoin-*.tar.gz`
+  DISTNAME=`echo instantcoin.tar.gz`
 
   # Build dynamic versions of everything
   # (with static linking to boost and openssl as well a some non-OS deps)
