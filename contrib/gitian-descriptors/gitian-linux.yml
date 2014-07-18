@@ -3,7 +3,7 @@ name: "instantcoin"
 suites:
 - "precise"
 architectures:
-- "i386"
+- "amd64"
 packages: 
 - "g++"
 - "git-core"
@@ -24,9 +24,9 @@ remotes:
 - "url": "https://github.com/nomaxpi/instantcoin.git"
   "dir": "instantcoin"
 files:
-- "bitcoin-deps-linux32-gitian-r6.zip"
-- "boost-linux32-1.55.0-gitian-r1.zip"
-- "qt-linux32-4.6.4-gitian-r1.tar.gz"
+- "bitcoin-deps-linux64-gitian-r6.zip"
+- "boost-linux64-1.55.0-gitian-r1.zip"
+- "qt-linux64-4.6.4-gitian-r1.tar.gz"
 script: |
   STAGING="$HOME/install"
   OPTFLAGS='-O2'
@@ -69,7 +69,7 @@ script: |
   # (with static linking to boost and openssl as well a some non-OS deps)
   mkdir -p distsrc
   cd distsrc
-  git clone https://github.com/nomaxpi/instantcoin.git
+  git clone https://github.com/instantcoin/instantcoin.git
   cd instantcoin
   mv * ../
   cd ..
