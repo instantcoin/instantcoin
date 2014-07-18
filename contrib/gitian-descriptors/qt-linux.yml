@@ -3,7 +3,7 @@ name: "qt-linux"
 suites:
 - "precise"
 architectures:
-- "i386"
+- "amd64"
 packages:
 - "zip"
 - "unzip"
