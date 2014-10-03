@@ -140,10 +140,10 @@ public:
         // Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1403785034;
         genesis.nNonce = 3624196;
-		
+
         hashGenesisBlock = genesis.GetHash();
 
-/*	while (hashGenesisBlock > bnProofOfWorkLimit.getuint256()){
+/*      while (hashGenesisBlock > bnProofOfWorkLimit.getuint256()){
             if (++genesis.nNonce==0) break;
             hashGenesisBlock = genesis.GetHash();
         }
@@ -153,13 +153,13 @@ public:
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         printf("%x\n", bnProofOfWorkLimit.GetCompact());
         printf("%d\n", genesis.nNonce);
-	genesis.print();
+        genesis.print();
 */
 
         assert(hashGenesisBlock == uint256("0x00000aeaebce03adab8292a58216dc0dd86d4cebdf375446f6b39d6f64d02fe0"));
 
         vFixedSeeds.clear();
-        vSeeds.clear();
+	vSeeds.clear();
 	vSeeds.push_back(CDNSSeedData("ns.instantcoin.genesis.foundation", "seed.instantcoin.genesis.foundation"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(111);
